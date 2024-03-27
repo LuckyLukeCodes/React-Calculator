@@ -39,7 +39,11 @@
 }
 
 body {
-  background: #f9f9f9;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .calculator-screen {
