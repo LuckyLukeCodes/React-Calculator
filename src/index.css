@@ -19,7 +19,7 @@
 :root {
   --hover-color: #7ea1fb;
   --bg-color: #f8f9fd;
-  --text-color: ##a7a4a7;
+  --text-color: #a7a4a7#585A60;
   --main-bg-color: #353956;
   --secondary-bg-color: #2d3048;
   --secondary-color: #ffffff;
@@ -82,8 +82,8 @@ body {
   border-radius: 50%;
   background: #d16d2d;
   box-shadow:
-    5px 5px 24px #ad5a25,
-    -5px -5px 24px #f58035;
+    1px 1px 24px #ad5a25,
+    -1px -1px 24px #f58035;
 }
 
 .inset-btn {

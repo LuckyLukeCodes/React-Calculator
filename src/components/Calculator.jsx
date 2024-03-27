@@ -2,16 +2,10 @@ import { useState } from "react";
 import CalculatorRoundBtn from "./CalculatorRoundBtn";
 import CalculatorScreen from "./CalculatorScreen";
 import CalculatorSquareBtn from "./CalculatorSquareBtn";
-import InsetBtn from "./InsetBtn";
 import data from "../utils/data";
 import { toLocaleString, removeSpaces } from "../utils/functions";
-import {
-  IoRefresh,
-  IoSettingsOutline,
-  IoCalculator,
-  IoCloseCircleOutline,
-} from "react-icons/io5";
 import ButtonContainer from "./ButtonContainer";
+import CalculatorContainer from "./CalculatorContainer";
 
 const Calculator = () => {
   const [calculation, setCalculation] = useState({
@@ -164,11 +158,10 @@ const Calculator = () => {
   };
 
   return (
-    <div className="h-[80%] rounded-xl border-2 border-slate-100 bg-[#EDEDF0] p-[20px] shadow-lg shadow-slate-300">
+    <CalculatorContainer>
       <CalculatorScreen
         value={calculation.number ? calculation.number : calculation.result}
       />
-
       <ButtonContainer>
         {data.map((item, index) =>
           item.type === "round" ? (
@@ -190,7 +183,7 @@ const Calculator = () => {
           ),
         )}
       </ButtonContainer>
-    </div>
+    </CalculatorContainer>
   );
 };
 
